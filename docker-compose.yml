@@ -1,0 +1,24 @@
+version: '3'
+services:
+  node-app:
+    build: .
+    ports:
+      - "3000:3000"
+    container_name: node-app-container
+    restart: always
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: example
+      DB_NAME: node_app_db
+
+  db:
+    platform: linux/x86_64
+    image: mysql:5.7
+    container_name: mysql-container
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: node_app_db

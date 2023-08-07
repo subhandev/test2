@@ -1,0 +1,11 @@
+{
+  "name": "docker-node-app",
+  "version": "1.0.0",
+  "description": "A simple Node.js app for Docker",
+  "main": "app.js",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
